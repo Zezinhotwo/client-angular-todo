@@ -1,10 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home.component/home.component';
+import { TodoComponent } from './components/todo/todo.component/todo.component';
 
 export const routes: Routes = [
     {
         path:"home",
-        component:HomeComponent
-        
+        component:TodoComponent
     }
 ];

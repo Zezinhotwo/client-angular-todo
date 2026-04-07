@@ -7,17 +7,23 @@ import { Todo } from '../models/todo';
   providedIn: 'root',
 })
 export class TodoApiServices {
-  constructor (private http:HttpClient){}
-  
-  private url = "http://localhost:8080/todos";
+  constructor(private http: HttpClient) {}
 
+  private url = 'http://localhost:8080/todos';
 
-  getUsers():Observable<Todo[]>{
+  getTodos(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.url);
   }
 
-  postUsers(obj:Todo):Observable<Todo>{
-    return this.http.post<Todo>(this.url,obj);
+  getTodoById(id: number): Observable<Todo> {
+    return this.http.get<Todo>(`${this.url}/${id}`);
   }
 
+  postTodo(obj: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.url, obj);
+  }
+
+  deleteTodo(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
+  }
 }

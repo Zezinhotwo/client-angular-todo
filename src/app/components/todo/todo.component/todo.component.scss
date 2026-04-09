@@ -1,0 +1,5 @@
+@use "../../../styles/abstracts/variables" as v;
+@use "../../../styles/abstracts/mixins" as m;
+.btn-show{
+    @include m.btn(v.$btn-primary);
+}

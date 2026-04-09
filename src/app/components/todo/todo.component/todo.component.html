@@ -1,5 +1,5 @@
 <h2>Lista de tarefas</h2>
-<button type="button" (click)="toggleForm()">New Todo!</button>
+<button class="btn-show" type="button" (click)="toggleForm()">New Todo!</button>
 
   <app-todo-form *ngIf="showForm" (create)="createTodo($event)"></app-todo-form>
 <ul>

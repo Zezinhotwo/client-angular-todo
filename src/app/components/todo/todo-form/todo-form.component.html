@@ -1,7 +1,20 @@
-<form (submit)="submit()">
+<form (ngSubmit)="submit()" class="form-create-todo">
   <input type="text" placeholder="Title" [(ngModel)]="todo.title" name="title" />
 
   <input type="text" placeholder="Description" [(ngModel)]="todo.description" name="description" />
 
-  <button class="create-todo" type="submit">Criar</button>
+  <div class="prioridade">
+    <input type="radio" [value]="1" name="prioridade" [(ngModel)]="todo.prioridade" />
+    <input type="radio" [value]="2" name="prioridade" [(ngModel)]="todo.prioridade" />
+    <input type="radio" [value]="3" name="prioridade" [(ngModel)]="todo.prioridade" />
+    <input type="radio" [value]="4" name="prioridade" [(ngModel)]="todo.prioridade" />
+    <input type="radio" [value]="5" name="prioridade" [(ngModel)]="todo.prioridade" />
+  </div>
+
+  <div class="completed">
+    <span class="text-completed">Completed</span>
+    <input type="checkbox" [(ngModel)]="todo.completed" name="completed" />
+  </div>
+
+  <button class="bnt-create-todo" type="submit">Criar</button>
 </form>

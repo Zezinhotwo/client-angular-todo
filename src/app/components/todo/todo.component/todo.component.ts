@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
   todo?: Todo;
-  showForm: boolean = false;
+  showForm: boolean = true;
   constructor(
     private service: TodoApiServices,
     private cd: ChangeDetectorRef,

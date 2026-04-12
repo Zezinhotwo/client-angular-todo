@@ -1,7 +1,15 @@
 @use "../../../styles/abstracts/variables" as v;
 @use "../../../styles/abstracts/mixins" as m;
 
-.create-todo {
+.bnt-create-todo {
     @include m.btn(v.$btn-success);
     margin: v.$spacing-sm;
+}
+
+.form-create-todo {
+    background-color: v.$color-detail-primary;
+    @include m.div(300px,300px);
+    @include m.flex();
+    flex-direction: column;
+    padding: 1.2em;
 }

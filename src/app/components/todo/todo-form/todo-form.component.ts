@@ -11,6 +11,7 @@ export class TodoFormComponent {
   todo: Todo = {
     title: '',
     description: '',
+    prioridade: 1,
     completed: false,
   };
 
@@ -22,6 +23,7 @@ export class TodoFormComponent {
     this.todo = {
       title: '',
       description: '',
+      prioridade: 0,
       completed: false,
     };
   }

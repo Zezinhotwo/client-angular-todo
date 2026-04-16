@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-todo-form',
   imports: [FormsModule],
   templateUrl: './todo-form.component.html',
-  styleUrl: './todo-form.component.scss',
+  styleUrls: ['./todo-form.component.scss'],
 })
 export class TodoFormComponent {
   todo: Todo = {

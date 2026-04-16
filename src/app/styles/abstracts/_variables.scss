@@ -1,6 +1,9 @@
 // COLORS
-$color-detail-primary: purple;
-$color-detail-second: violet;
+$color-detail-primary: #282828;
+$color-detail-second: #0f0f0f;
+$color-detail: grey;
+$color-white:white;
+$color-black:black;
 
 // SPACING
 $spacing-sm: 8px;
@@ -15,9 +18,8 @@ $radius-md: 16px;
 $font-heading: Arial, Helvetica, sans-serif;
 $font-body: Georgia, "Times New Roman", Times, serif;
 
-
 // BUTTON COLORS
-$btn-primary: $color-detail-primary;
+$btn-primary: #ff0000;
 $btn-success: green;
 $btn-danger: red;
 $btn-warning: yellow;

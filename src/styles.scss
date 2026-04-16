@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+@use "app/styles/base/reset";
+@use "app/styles/abstracts/variables" as v;
+body {
+    background-color: v.$color-detail-second;
+}

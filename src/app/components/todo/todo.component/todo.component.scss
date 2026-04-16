@@ -1,5 +1,38 @@
 @use "../../../styles/abstracts/variables" as v;
 @use "../../../styles/abstracts/mixins" as m;
-.btn-show{
-    @include m.btn(v.$btn-primary);
+
+.body {
+    @include m.flex();
+    flex-direction: column;
+}
+.header {
+    @include m.div(100%, 100%);
+    @include m.flex();
+    .container {
+        background-color: v.$color-detail-primary;
+        @include m.div(50%, 70px, none);
+        @include m.flex(center, space-between);
+        border-bottom: 1px solid v.$color-detail;
+        padding: 0.5em;
+        .burg {
+            flex-direction: column;
+            @include m.flex(center, space-evenly);
+            @include m.div(50px, 50px, none);
+            .line {
+                background-color: v.$color-detail;
+                @include m.div(40px, 5px);
+            }
+        }
+        .btn-show {
+            @include m.btn(v.$color-white, v.$color-black);
+            font-weight: bold;
+            &:active {
+                background-color: v.$color-detail;
+            }
+        }
+    }
+}
+.main {
+    background-color: v.$color-detail-primary;
+    @include m.div(50%, 80vh, none);
 }

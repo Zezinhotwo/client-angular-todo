@@ -8,8 +8,13 @@
 
 .form-create-todo {
     background-color: v.$color-detail-primary;
-    @include m.div(300px,300px);
+    @include m.div(300px, 300px);
     @include m.flex();
     flex-direction: column;
     padding: 1.2em;
+    border: 1px solid v.$color-detail;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

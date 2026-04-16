@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-home.component',
   imports: [CommonModule, TodoFormComponent],
   templateUrl: './todo.component.html',
-  styleUrl: './todo.component.scss',
+  styleUrls: ['./todo.component.scss'],
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];

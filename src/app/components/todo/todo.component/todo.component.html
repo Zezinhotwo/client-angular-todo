@@ -1,12 +1,23 @@
-<div class="header">
-  <button class="btn-show" type="button" (click)="toggleForm()">New Todo!</button>
+<div class="body">
+  <div class="header">
+    <div class="container">
+      <div class="burg">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <button class="btn-show" type="button" (click)="toggleForm()">New Todo!</button>
+    </div>
+  </div>
+  <div class="main">
+    <ul>
+      <li *ngFor="let todo of todos">
+        {{ todo.title }}
+
+        <button (click)="deleteTodo(todo.id!)">Deletar</button>
+      </li>
+    </ul>
+  </div>
+
+  <app-todo-form *ngIf="showForm" (create)="createTodo($event)"></app-todo-form>
 </div>
-
-<app-todo-form *ngIf="showForm" (create)="createTodo($event)"></app-todo-form>
-<ul>
-  <li *ngFor="let todo of todos">
-    {{ todo.title }}
-
-    <button (click)="deleteTodo(todo.id!)">Deletar</button>
-  </li>
-</ul>

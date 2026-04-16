@@ -6,8 +6,16 @@
     justify-content: $justify-content;
 }
 
-@mixin border-radius($px: v.$radius-sm) {
-    border-radius: $px;
+@mixin div($w: 200px, $h: 200px, $border: v.$radius-sm) {
+    @include border-radius($border);
+    width: $w;
+    height: $h;
+}
+
+@mixin text($color: black) {
+    font-family: v.$font-body;
+    line-height: 1.2em;
+    color: $color;
 }
 
 @mixin btn($bg: v.$btn-primary, $color: white) {
@@ -19,15 +27,6 @@
     background-color: $bg;
     color: $color;
 }
-
-@mixin div($h: 200px, $w: 200px, $border: v.$radius-sm) {
-    @include border-radius($border);
-    width: $w;
-    height: $h;
-}
-
-@mixin text($color: black) {
-    font-family: v.$font-body;
-    line-height: 1.2em;
-    color: $color;
+@mixin border-radius($px: v.$radius-sm) {
+    border-radius: $px;
 }

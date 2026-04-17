@@ -1,20 +1,39 @@
 @use "../../../styles/abstracts/variables" as v;
 @use "../../../styles/abstracts/mixins" as m;
 
-.bnt-create-todo {
-    @include m.btn(v.$btn-success);
-    margin: v.$spacing-sm;
-}
-
 .form-create-todo {
-    background-color: v.$color-detail-primary;
-    @include m.div(300px, 300px);
+    background-color: v.$color-detail-second;
+    @include m.div(30%, 50%);
     @include m.flex();
     flex-direction: column;
     padding: 1.2em;
-    border: 1px solid v.$color-detail;
+    // border: 1px solid v.$color-detail;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
+
+    .title {
+        @include m.div(90%, 20%);
+        font-weight: bold;
+    }
+    .description {
+        @include m.div(90%, 100%);
+        resize: none;
+    }
+    .prioridade {
+        @include m.div(50%, 30%);
+        @include m.flex();
+    }
+    .completed {
+        @include m.div(50%, 30%);
+        @include m.flex();
+        color: v.$color-white;
+    }
+    .bnt-create-todo {
+        @include m.div(100%, 20%);
+        @include m.btn(v.$btn-success);
+        margin: v.$spacing-sm;
+        font-weight: bold;
+    }
 }

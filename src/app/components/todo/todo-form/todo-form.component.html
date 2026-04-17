@@ -1,7 +1,12 @@
 <form (ngSubmit)="submit()" class="form-create-todo">
-  <input type="text" placeholder="Title" [(ngModel)]="todo.title" name="title" />
+  <input type="text" class="title" placeholder="Title" [(ngModel)]="todo.title" name="title" />
 
-  <input type="text" placeholder="Description" [(ngModel)]="todo.description" name="description" />
+  <textarea
+    name="description"
+    class="description"
+    placeholder="Description example: ' i go to learning português '"
+    [(ngModel)]="todo.description"
+  ></textarea>
 
   <div class="prioridade">
     <input type="radio" [value]="1" name="prioridade" [(ngModel)]="todo.prioridade" />

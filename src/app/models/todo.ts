@@ -4,4 +4,6 @@ export interface Todo {
   description: string;
   prioridade: number;
   completed: boolean;
+  start: string;
+  end: string;
 }

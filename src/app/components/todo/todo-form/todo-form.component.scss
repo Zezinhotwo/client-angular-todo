@@ -25,6 +25,10 @@
         @include m.div(50%, 30%);
         @include m.flex();
     }
+    .prazo{
+        color: v.$color-white;
+
+    }
     .completed {
         @include m.div(50%, 30%);
         @include m.flex();

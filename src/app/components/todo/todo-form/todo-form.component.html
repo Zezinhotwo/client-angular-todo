@@ -15,7 +15,16 @@
     <input type="radio" [value]="4" name="prioridade" [(ngModel)]="todo.prioridade" />
     <input type="radio" [value]="5" name="prioridade" [(ngModel)]="todo.prioridade" />
   </div>
-
+  <div class="prazo">
+    <label for="start"
+      >Start
+      <input type="date" name="start" [(ngModel)]="todo.start" />
+    </label>
+    <label for="end"
+      >End
+      <input type="date" name="end" [(ngModel)]="todo.end" />
+    </label>
+  </div>
   <div class="completed">
     <span class="text-completed">Completed</span>
     <input type="checkbox" [(ngModel)]="todo.completed" name="completed" />

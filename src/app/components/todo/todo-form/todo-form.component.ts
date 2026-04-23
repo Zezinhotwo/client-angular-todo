@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Todo } from '../../../models/todo';
 import { FormsModule } from '@angular/forms';
+import { addDays, getToday } from '../../../utils/dateFormat';
 @Component({
   selector: 'app-todo-form',
   imports: [FormsModule],
@@ -13,9 +14,13 @@ export class TodoFormComponent {
     description: '',
     prioridade: 1,
     completed: false,
+    start: getToday(),
+    end: addDays(1),
   };
 
   @Output() create = new EventEmitter<Todo>();
+
+  ngOnInit() {}
 
   submit() {
     this.create.emit(this.todo);
@@ -25,6 +30,8 @@ export class TodoFormComponent {
       description: '',
       prioridade: 0,
       completed: false,
+      start: getToday(),
+      end: addDays(1),
     };
   }
 }
